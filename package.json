@@ -1,7 +1,7 @@
 {
-  "name": "segmented-lidar-landing",
+  "name": "polylidarweb",
   "version": "0.0.0",
-  "description": "Lidar Point Cloud landing",
+  "description": "Demo of 2D/3D Polylidar on Web.",
   "engines": {
     "node": ">= 10.13 <11"
   },
@@ -26,7 +26,8 @@
     "clean": "rimraf coverage build tmp dist",
     "demo-2d": "parcel serve demo/demo2D/index.html",
     "demo-3d": "parcel serve demo/demo3D/index.html",
-    "build-demo": "parcel build demo/index.html --public-url .",
+    "build-demo-2d": "parcel build demo/demo2D/index.html --public-url . --out-dir docs/demo2d",
+    "build-demo-3d": "parcel build demo/demo3D/index.html --public-url . --out-dir docs/demo3d",
     "build": "tsc -p tsconfig.release.json",
     "build:watch": "tsc -w -p tsconfig.release.json",
     "lint": "tslint -t stylish --project \"tsconfig.json\"",
