@@ -1,0 +1,47 @@
+{
+  "name": "segmented-lidar-landing",
+  "version": "0.0.0",
+  "description": "Lidar Point Cloud landing",
+  "engines": {
+    "node": ">= 10.13 <11"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.3.12",
+    "@types/node": "^10.12.18",
+    "cssnano": "^4.1.8",
+    "dat.gui": "^0.7.5",
+    "jest": "~23.6.0",
+    "plotly.js-dist": "^1.44.1",
+    "prettier": "1.15.3",
+    "rimraf": "^2.6.3",
+    "svg-points": "^6.0.1",
+    "ts-jest": "~23.10.5",
+    "tslint": "~5.12.0",
+    "tslint-config-prettier": "1.17.0",
+    "tslint-microsoft-contrib": "~6.0.0",
+    "tsutils": "~3.7.0",
+    "typescript": "^3.2.2"
+  },
+  "scripts": {
+    "clean": "rimraf coverage build tmp dist",
+    "demo-2d": "parcel serve demo/demo2D/index.html",
+    "demo-3d": "parcel serve demo/demo3D/index.html",
+    "build-demo": "parcel build demo/index.html --public-url .",
+    "build": "tsc -p tsconfig.release.json",
+    "build:watch": "tsc -w -p tsconfig.release.json",
+    "lint": "tslint -t stylish --project \"tsconfig.json\"",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch"
+  },
+  "author": "Jeremy Castagno <jdasta@umich.edu>",
+  "license": "MIT",
+  "dependencies": {
+    "@types/delaunator": "^2.0.0",
+    "delaunator": "^3.0.2",
+    "denque": "^1.4.0",
+    "tslib": "~1.9.3"
+  },
+  "browserslist": [
+    "since 2017-06"
+  ]
+}
